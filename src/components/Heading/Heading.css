@@ -1,0 +1,21 @@
+.header{
+    background-image: url('./HeadingImages/bg.jpg');
+    height: 60vh;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    /* transform: translateY(-10%); */
+    margin-bottom: 30px;
+}
+
+.heading-container{
+    background-color: rgb(0, 0, 0, 0.5);
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 50px;
+    text-align: center;
+}

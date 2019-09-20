@@ -1,0 +1,44 @@
+.main-menu{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.menu-item{
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.classes {
+    background-color: #ee8600;
+}
+
+.equipment {
+    background-color: #4685d1;
+}
+
+.spells {
+    background-color: #704cd9;
+}
+
+.races {
+    background-color: #47D18C;
+}
+
+.monsters {
+    background-color: #bc0f0f;
+}
+
+
+.menu-item img{
+    width: 100px;
+}
+
+.active {
+    opacity: 1;
+}
