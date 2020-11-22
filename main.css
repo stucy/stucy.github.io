@@ -21,6 +21,26 @@ html{
     height: 50px;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #3695c3; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #267da8; 
+}
+
 .page-container {
     padding-top: 60px;
 }
