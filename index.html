@@ -7,6 +7,7 @@
     <title>Stoyan Georgiev | CV</title>
 
     <link rel="stylesheet" href="main.css">
+    <script src="assets/jquery.min.js" defer></script>
     <script src="main.js" defer></script>
 
 </head>
@@ -75,7 +76,7 @@
         <section class="resume-section">
 
             <h1 class="section-heading">Resume</h1>
-            <h3>Experience</h3>
+            <h3 class="section-subheading">Experience</h3>
 
             <div class="resume-card">
                 <div class="resume-info">
@@ -89,7 +90,7 @@
                 </div>
             </div>
 
-            <h3>Educaion</h3>
+            <h3 class="section-subheading">Educaion</h3>
 
             <div class="resume-card">
                 <div class="resume-info">
@@ -114,7 +115,7 @@
                 </div>
             </div>
 
-            <h3>Skillset</h3>
+            <h3 class="section-subheading">Skillset</h3>
 
             <div class="resume-card">
                 <ul>
@@ -234,12 +235,12 @@
 
             <div class="comment-container">
                 <div class="form-group">
-                    <input type="text" placeholder="Username">
-                    <input type="text" placeholder="Comment">
+                    <input type="text" placeholder="Username" id="username">
+                    <input type="text" placeholder="Comment" id="comment">
                 </div>
 
-                <div id="comments">
-                    <ul>
+                <div class="comments">
+                    <ul id="commentContainer">
 
                         <li>
                             <span class="username">Username:</span>
