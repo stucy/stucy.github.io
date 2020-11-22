@@ -1,7 +1,7 @@
 (function () {
     // clearStorage();
-
-    if(localStorage.getItem('numCommnets') == null)
+    
+    if(localStorage.getItem('numComments') == null)
         localStorage.setItem('numComments', '0');
 
     let storage = allComments();
@@ -32,7 +32,11 @@ $("#comment").on("keypress", e => {
 
             let newNumCom = parseInt(numComments) + 1;
 
+            // console.log(newNumCom)
+
             localStorage.setItem(`numComments`, newNumCom);
+
+            addComments(allComments());
         }
     }
 })
@@ -40,14 +44,16 @@ $("#comment").on("keypress", e => {
 function allComments() {
 
     var values = [],
-        keys = Object.keys(localStorage),
+        keys = Object.keys(localStorage).sort(),
         i = keys.length;
+
+    keys.pop();
+
+    // keys.reverse();
 
     while ( i-- ) {
         values.push( localStorage.getItem(keys[i]) );
     }
-
-    values.pop();
 
     return values;
 }
@@ -65,3 +71,7 @@ function addComments(comments){
 function clearStorage(){
     localStorage.clear();
 }
+
+$('#mobileNav').click(() => {
+    $('#navigation').toggleClass('active')
+})

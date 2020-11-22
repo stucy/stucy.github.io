@@ -66,6 +66,17 @@ section:not(:first-child) {
     padding: 10px;
 }
 
+#mobileNav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+}
+
+#mobileNav img {
+    width: 40px;
+}
+
 .navbar-list {
     display: flex;
     list-style-type: none;
@@ -105,6 +116,7 @@ footer {
     display: flex;
     font-size: 16px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 footer ul {
@@ -119,6 +131,7 @@ footer ul li{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 footer .social-icon {
@@ -151,9 +164,9 @@ footer .social-icon {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 400px;
     background-color: white;
     box-shadow: -1px 1px 6px #00000040;
+    flex-wrap: wrap;
 }
 
 .card-info {
@@ -161,13 +174,15 @@ footer .social-icon {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 40%;
     font-size: 24px;
 }
 
 .card-img {
-    width: 50%;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
     padding: 10px;
 }
 
@@ -175,6 +190,7 @@ footer .social-icon {
     border-radius: 50%;
     padding: 10px;
     width: 250px;
+    margin: 0 auto
 }
 
 .card-info > * {
@@ -227,7 +243,6 @@ footer .social-icon {
     background-color: #36bbfd;
     padding: 50px;
     width: 600px;
-    height: 150px;
     margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
@@ -357,6 +372,7 @@ footer .social-icon {
     height: 100%;
     padding: 20px;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .contact-info ul{
@@ -447,4 +463,101 @@ form {
 
 .comments .date {
     float: right;
+}
+
+
+@media (max-width: 1110px){
+
+   .card-img,
+   .card-info{
+       width: 100%;
+   }
+
+}
+
+@media (max-width: 760px){
+    .about-section{
+        flex-direction: column;
+    }
+
+    .about-section > * {
+        padding: 0;
+    }
+
+    .profile-card,
+    .profile-info{
+        width: 100%;
+    }
+
+    .profile-info{
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    .resume-card{
+        width: auto;
+    }
+
+    .resume-info,
+    .resume-text{
+        width: 100%;
+    }
+    
+    footer ul {
+        margin-left: 0;
+    }
+
+    .comment-container .form-group{
+        flex-wrap: wrap;
+    }
+
+    .comments ul li {
+        margin: 20px 0px;
+    }
+    
+    #commentContainer {
+        padding: 15px;
+    }
+
+    .contact-form .form-group{
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 1000px){
+    .navbar {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .navbar-name {
+        text-align: center;
+    }
+
+    #mobileNav {
+        display: block
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        margin: 0;
+        height: 0px;
+        transition: all 1s;
+        display: none;
+    }
+
+    .navbar-list.active{
+        height: auto;
+        display: flex;
+    }
+
+}
+
+@media (max-width: 470px){
+    .navbar-name {
+        text-align: left;
+        font-size: 18px;
+    }
 }
