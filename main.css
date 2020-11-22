@@ -1,0 +1,408 @@
+/* Global Styles */
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    height: 100%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.page-container {
+    padding-top: 60px;
+}
+
+.social-icon{
+    width: 40px;
+}
+
+.devider {
+    background-color: black;
+    height: 2px;
+    margin-top: 25px;
+    width: 60%;
+    border: none;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 48px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+section:not(:first-child) {
+    padding: 20px 50px;
+}
+
+/* Navigation Styles */
+
+.navbar {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    box-sizing: border-box;
+    height: 60px;
+    background-color: crimson;
+    font-size: 22px;
+    z-index: 100;
+}
+
+.navbar-name {
+    padding: 10px;
+}
+
+.navbar-list {
+    display: flex;
+    list-style-type: none;
+    margin-left: auto;
+    align-items: center;
+}
+
+.navbar-list li {
+    padding: 10px;
+    position: relative;
+    margin: 5px;
+}
+
+.navbar-list li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-list li::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0px;
+    height: 2px;
+    background-color: black;
+    transition: all .3s;
+}
+
+.navbar-list li:hover::before{
+    width: 100%;
+}
+
+/* Footer Styles */
+
+footer {
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+}
+
+footer ul {
+    display: flex;
+    list-style-type: none;
+    margin-left: auto;
+}
+
+footer ul li{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .social-icon {
+    width: 20px;
+}
+
+.copyright {
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* About Styles  */
+
+.about-section {
+    display: flex;
+    background-color: coral;
+    justify-content: flex-start;
+}
+
+.about-section > * {
+    padding: 20px 50px;
+}
+
+.profile-card {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px;
+    background-color: cadetblue;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-size: 24px;
+}
+
+.card-img {
+    width: 50%;
+    display: block;
+    padding: 10px;
+}
+
+.card-img img{
+    border-radius: 50%;
+    padding: 10px;
+    width: 250px;
+}
+
+.card-info > * {
+    margin-top: 10px;
+}
+
+.card-info ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.card-info ul li{
+    margin: 5px;
+}
+
+.card-job {
+    text-align: center;
+}
+
+.profile-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.profile-info h1{
+    font-size: 50px;
+}
+
+.profile-info h3{
+    font-size: 32px;
+}
+
+.profile-info p {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* Resume Styles */
+
+.resume-section {
+    background-color: darkgoldenrod;
+}
+
+.resume-section h3 {
+    font-size: 32px;
+}
+
+.resume-card {
+    background-color: white;
+    padding: 50px;
+    width: 600px;
+    height: 200px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.resume-info {
+    width: 200px;
+    font-size: 20px;
+}
+
+.resume-info > * {
+    margin-top: 10px;
+}
+
+.resume-info .time {
+    color: blue;
+    font-weight: bold;
+}
+
+.resume-text {
+    width: 400px;
+    font-size: 18px;
+}
+
+.resume-text p:not(:first-child){
+    margin-top: 15px
+}
+
+.resume-card ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.resume-card ul li{
+    margin: 25px;
+    font-size: 22px;
+}
+
+.resume-card ul li::before{
+    content: "\203A";
+    color:blue;
+    font-weight: bold;
+    display: inline-block; 
+    width: 15px;
+    margin-left: -1em;
+}
+
+/* Project Styles */
+
+.project-section {
+    background-color: darkgreen;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-item {
+    position: relative;
+    height: 220px;
+    z-index: 1;
+    cursor: pointer;
+    margin: 20px;
+    font-size: 14;
+}
+
+.project-item img {
+    height: 220px;
+    width: auto;
+    border-radius: 10px;
+}
+
+.project-item .project-name {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    display: none;
+    transition: all 1s;
+    color: white;
+}
+
+.project-item .project-download {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    transition: all 1s;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: burlywood;
+    border-radius: 10px;
+    color: black;
+}
+
+
+.project-item:hover img {
+   filter: blur(2px) brightness(10%);
+}
+
+.project-item:hover .project-download{
+    display: block;
+}
+
+.project-item:hover .project-name{
+    display: block;
+}
+
+/* Contact Styles */
+
+.contact-section {
+    background-color: cadetblue;
+}
+
+.contact-container {
+    display: flex;
+    height: 100%;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.contact-info ul{
+    list-style-type: none;
+}
+
+.contact-info ul li {
+    margin: 15px;
+}
+
+.contact-form input,
+.comment-container .form-group input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 10px 10px;
+    margin: 5px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.contact-form textarea{
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+}
+
+form {
+    width: 100%;
+}
+
+.contact-form .form-group{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form form button {
+    padding: 10px 20px;
+    margin: 5px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    float: right;
+}
+
+/* Comments Styles */
+
+.comment-section {
+    background-color: chartreuse;
+}
+
+.comment-container .form-group {
+    display: flex;
+    justify-content: center;
+}
+
+.comment-container .form-group input:first-child{
+    width: 200px;
+}
