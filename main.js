@@ -73,5 +73,11 @@ function clearStorage(){
 }
 
 $('#mobileNav').click(() => {
-    $('#navigation').toggleClass('active')
-})
+    $('#navigation').toggleClass('active');
+});
+
+$( "a.scrollLink" ).click(function( event ) {
+    event.preventDefault();
+    $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 500);
+    $('#navigation').removeClass('active');
+});

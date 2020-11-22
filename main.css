@@ -14,6 +14,13 @@ html{
     font-weight: bold;
 }
 
+#resume,
+#projects,
+#contact,
+#comments {
+    height: 50px;
+}
+
 .page-container {
     padding-top: 60px;
 }
@@ -365,6 +372,11 @@ footer .social-icon {
     display: block;
 }
 
+.project-item .project-name a {
+    color: white;
+    text-decoration: none;
+}
+
 /* Contact Styles */
 
 .contact-container {
@@ -463,6 +475,31 @@ form {
 
 .comments .date {
     float: right;
+}
+
+#commentContainer {
+    max-height: 200px;
+    overflow: auto;
+}
+
+/* width */
+#commentContainer::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+/* Track */
+#commentContainer::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+
+/* Handle */
+#commentContainer::-webkit-scrollbar-thumb {
+background: #3695c3; 
+}
+
+/* Handle on hover */
+#commentContainer::-webkit-scrollbar-thumb:hover {
+background: #267da8; 
 }
 
 
