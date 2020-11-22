@@ -482,6 +482,11 @@ form {
     overflow: auto;
 }
 
+#username.active,
+#comment.active{
+    border: 2px solid red;
+}
+
 /* width */
 #commentContainer::-webkit-scrollbar {
     width: 10px;

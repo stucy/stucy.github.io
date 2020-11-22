@@ -13,6 +13,8 @@ $("#comment").on("keypress", e => {
     if(e.keyCode == 13){
         let username = $('#username').val();
         let comment = $('#comment').val();
+        
+        // console.log({username, comment})
 
         if(username != '' && comment != ''){
 
@@ -38,6 +40,21 @@ $("#comment").on("keypress", e => {
 
             addComments(allComments());
         }
+        
+        if(username == ''){
+            $('#username').addClass('active');
+        }
+
+        if(comment == ''){
+            $('#comment').addClass('active');
+        }
+
+    }
+})
+
+$('#username, #comment').on('keypress', function (e) {
+    if(e.keyCode != 13){
+        $(this).removeClass('active');
     }
 })
 
